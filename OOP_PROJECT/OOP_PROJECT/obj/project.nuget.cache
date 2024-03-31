@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "9nHCJWWwDWJ5IOZlqgjarVRYUB5KxtUv/wrg1HciNrgeF2DmP4mgwgdw0O50BShIzejWuEWUfZDtjAdFsmMhkA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\bagui\\OneDrive\\Documents\\codes\\First sem. 2023-2024\\OOP_PROJECT\\OOP_PROJECT\\OOP_PROJECT.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bagui\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
+    "C:\\Users\\bagui\\.nuget\\packages\\system.data.oledb\\8.0.0\\system.data.oledb.8.0.0.nupkg.sha512",
+    "C:\\Users\\bagui\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.0\\system.diagnostics.eventlog.8.0.0.nupkg.sha512",
+    "C:\\Users\\bagui\\.nuget\\packages\\system.diagnostics.performancecounter\\8.0.0\\system.diagnostics.performancecounter.8.0.0.nupkg.sha512",
+    "C:\\Users\\bagui\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
