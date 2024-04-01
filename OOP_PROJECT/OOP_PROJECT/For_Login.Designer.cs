@@ -214,6 +214,7 @@
             label6.Size = new Size(62, 18);
             label6.TabIndex = 15;
             label6.Text = "Sign up";
+            label6.Click += label6_Click;
             // 
             // panel7
             // 

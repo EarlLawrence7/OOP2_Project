@@ -18,7 +18,7 @@ namespace OOP_PROJECT
         OleDbConnection con = new OleDbConnection();
         string dbProvider = "Provider=Microsoft.ACE.OLEDB.12.0;";
         string dbsource = @"Data Source=C:\Users\bagui\OneDrive\Documents\MOVIES.accdb";
-
+        private const string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\bagui\OneDrive\Documents\MOVIES.accdb";
         public For_Profile(string username)
         {
             InitializeComponent();
@@ -161,5 +161,47 @@ namespace OOP_PROJECT
             for_login.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            {
+                // Prompt the user for confirmation
+                DialogResult result = MessageBox.Show("Are you sure you want to delete your account?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    // If user confirms deletion, proceed with deleting the account
+                    if (DeleteAccount(loggedInUsername))
+                    {
+                        MessageBox.Show("Account deleted successfully!");
+
+                        // Optionally, navigate back to the login form or close the application
+                        For_Login forLogin = new For_Login();
+                        forLogin.Show();
+                        this.Close(); // Close the profile form
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to delete account. Please try again later.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+            private bool DeleteAccount(string username)
+            {
+                using (OleDbConnection conn = new OleDbConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "DELETE FROM Accounts WHERE Username = ?";
+
+                    using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@username", username);
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+        }
     }
-}
+

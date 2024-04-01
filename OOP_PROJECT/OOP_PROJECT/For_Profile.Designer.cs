@@ -82,6 +82,7 @@
             tbxPassWord = new TextBox();
             panel16 = new Panel();
             btnShowHide = new Button();
+            button1 = new Button();
             panel2.SuspendLayout();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
@@ -248,7 +249,7 @@
             flowLayoutPanel1.Location = new Point(0, 47);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Padding = new Padding(25, 30, 0, 0);
-            flowLayoutPanel1.Size = new Size(282, 603);
+            flowLayoutPanel1.Size = new Size(282, 964);
             flowLayoutPanel1.TabIndex = 3;
             // 
             // panel6
@@ -332,7 +333,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1336, 47);
+            panel1.Size = new Size(1324, 47);
             panel1.TabIndex = 2;
             // 
             // label13
@@ -486,7 +487,7 @@
             pictureBox2.Location = new Point(316, 80);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(205, 175);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 19;
             pictureBox2.TabStop = false;
             // 
@@ -512,10 +513,9 @@
             // 
             panel13.BackColor = Color.DarkSlateGray;
             panel13.Controls.Add(label11);
-            panel13.Dock = DockStyle.Bottom;
-            panel13.Location = new Point(282, 316);
+            panel13.Location = new Point(282, 301);
             panel13.Name = "panel13";
-            panel13.Size = new Size(1054, 334);
+            panel13.Size = new Size(1030, 710);
             panel13.TabIndex = 23;
             // 
             // label11
@@ -631,11 +631,27 @@
             btnShowHide.UseVisualStyleBackColor = false;
             btnShowHide.Click += btnShowHide_Click;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.Red;
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Segoe UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = SystemColors.ControlLightLight;
+            button1.Location = new Point(1181, 62);
+            button1.Name = "button1";
+            button1.Size = new Size(143, 24);
+            button1.TabIndex = 34;
+            button1.Text = "Delete my account";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // For_Profile
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
             ClientSize = new Size(1336, 650);
+            Controls.Add(button1);
             Controls.Add(btnShowHide);
             Controls.Add(panel16);
             Controls.Add(tbxPassWord);
@@ -743,5 +759,6 @@
         private Panel panel15;
         private Panel panel16;
         private Button btnShowHide;
+        private Button button1;
     }
 }

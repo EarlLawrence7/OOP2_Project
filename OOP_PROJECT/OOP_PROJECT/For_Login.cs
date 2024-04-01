@@ -71,5 +71,12 @@ namespace OOP_PROJECT
         {
             Application.Exit();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            For_Signup For_Signup = new For_Signup();
+            For_Signup.Show();
+            this.Hide();
+        }
     }
 }
